@@ -1,75 +1,152 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fcommerce&project-name=commerce&repo-name=commerce&demo-title=Next.js%20Commerce&demo-url=https%3A%2F%2Fdemo.vercel.store&demo-image=https%3A%2F%2Fbigcommerce-demo-asset-ksvtgfvnd.vercel.app%2Fbigcommerce.png&env=COMPANY_NAME,SHOPIFY_REVALIDATION_SECRET,SHOPIFY_STORE_DOMAIN,SHOPIFY_STOREFRONT_ACCESS_TOKEN,SITE_NAME)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panadería Marín</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf6;
+      color: #4b2e1e;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #f5deb3;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-width: 120px;
+    }
+    nav {
+      background-color: #d4a373;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1608198093002-de4d45e0a7a1?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3em;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .producto {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .producto:hover {
+      transform: scale(1.05);
+    }
+    .producto img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #d4a373;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
 
-# Next.js Commerce
+  <header>
+    <img src="FB_IMG_1756431456918.jpg" alt="Logo Panadería Marín">
+    <h2>Panadería Marín</h2>
+    <p>Tradición desde 1960</p>
+  </header>
 
-A high-performance, server-rendered Next.js App Router ecommerce application.
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#productos">Productos</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-This template uses React Server Components, Server Actions, `Suspense`, `useOptimistic`, and more.
+  <div class="hero">
+    <h1>El sabor de la tradición en cada mordida</h1>
+  </div>
 
-<h3 id="v1-note"></h3>
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En <strong>Panadería Marín</strong>, desde 1960, horneamos con amor y dedicación pan fresco para nuestra comunidad.
+      Ubicados en el centro de Ocampo, Michoacán, seguimos conservando el sabor auténtico que ha acompañado a generaciones.
+    </p>
+  </section>
 
-> Note: Looking for Next.js Commerce v1? View the [code](https://github.com/vercel/commerce/tree/v1), [demo](https://commerce-v1.vercel.store), and [release notes](https://github.com/vercel/commerce/releases/tag/v1).
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1608198093002-de4d45e0a7a1?auto=format&fit=crop&w=500&q=80" alt="Pan artesanal">
+        <h3>Pan artesanal</h3>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=500&q=80" alt="Pasteles">
+        <h3>Pasteles</h3>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1622737133809-d95047b9bb25?auto=format&fit=crop&w=500&q=80" alt="Conchas">
+        <h3>Conchas</h3>
+      </div>
+    </div>
+  </section>
 
-## Providers
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+    <p>📍 Nos encuentras en el centro de Ocampo, Michoacán.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </section>
 
-Vercel will only be actively maintaining a Shopify version [as outlined in our vision and strategy for Next.js Commerce](https://github.com/vercel/commerce/pull/966).
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📞 Teléfono: 55-1234-5678</p>
+    <p>💬 WhatsApp: <a href="https://wa.me/5215512345678" target="_blank">Haz tu pedido aquí</a></p>
+    <p>📩 Facebook: <a href="https://facebook.com" target="_blank">Panadería Marín</a></p>
+  </section>
 
-Vercel is happy to partner and work with any commerce provider to help them get a similar template up and running and listed below. Alternative providers should be able to fork this repository and swap out the `lib/shopify` file with their own implementation while leaving the rest of the template mostly unchanged.
+  <footer>
+    <p>&copy; 2025 Panadería Marín - Ocampo, Michoacán</p>
+  </footer>
 
-- Shopify (this repository)
-- [BigCommerce](https://github.com/bigcommerce/nextjs-commerce) ([Demo](https://next-commerce-v2.vercel.app/))
-- [Ecwid by Lightspeed](https://github.com/Ecwid/ecwid-nextjs-commerce/) ([Demo](https://ecwid-nextjs-commerce.vercel.app/))
-- [Geins](https://github.com/geins-io/vercel-nextjs-commerce) ([Demo](https://geins-nextjs-commerce-starter.vercel.app/))
-- [Medusa](https://github.com/medusajs/vercel-commerce) ([Demo](https://medusa-nextjs-commerce.vercel.app/))
-- [Prodigy Commerce](https://github.com/prodigycommerce/nextjs-commerce) ([Demo](https://prodigy-nextjs-commerce.vercel.app/))
-- [Saleor](https://github.com/saleor/nextjs-commerce) ([Demo](https://saleor-commerce.vercel.app/))
-- [Shopware](https://github.com/shopwareLabs/vercel-commerce) ([Demo](https://shopware-vercel-commerce-react.vercel.app/))
-- [Swell](https://github.com/swellstores/verswell-commerce) ([Demo](https://verswell-commerce.vercel.app/))
-- [Umbraco](https://github.com/umbraco/Umbraco.VercelCommerce.Demo) ([Demo](https://vercel-commerce-demo.umbraco.com/))
-- [Wix](https://github.com/wix/headless-templates/tree/main/nextjs/commerce) ([Demo](https://wix-nextjs-commerce.vercel.app/))
-- [Fourthwall](https://github.com/FourthwallHQ/vercel-commerce) ([Demo](https://vercel-storefront.fourthwall.app/))
-
-> Note: Providers, if you are looking to use similar products for your demo, you can [download these assets](https://drive.google.com/file/d/1q_bKerjrwZgHwCw0ovfUMW6He9VtepO_/view?usp=sharing).
-
-## Integrations
-
-Integrations enable upgraded or additional functionality for Next.js Commerce
-
-- [Orama](https://github.com/oramasearch/nextjs-commerce) ([Demo](https://vercel-commerce.oramasearch.com/))
-
-  - Upgrades search to include typeahead with dynamic re-rendering, vector-based similarity search, and JS-based configuration.
-  - Search runs entirely in the browser for smaller catalogs or on a CDN for larger.
-
-- [React Bricks](https://github.com/ReactBricks/nextjs-commerce-rb) ([Demo](https://nextjs-commerce.reactbricks.com/))
-  - Edit pages, product details, and footer content visually using [React Bricks](https://www.reactbricks.com) visual headless CMS.
-
-## Running locally
-
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js Commerce. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables) for this, but a `.env` file is all that is necessary.
-
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control your Shopify store.
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Your app should now be running on [localhost:3000](http://localhost:3000/).
-
-<details>
-  <summary>Expand if you work at Vercel and want to run locally and / or contribute</summary>
-
-1. Run `vc link`.
-1. Select the `Vercel Solutions` scope.
-1. Connect to the existing `commerce-shopify` project.
-1. Run `vc env pull` to get environment variables.
-1. Run `pnpm dev` to ensure everything is working correctly.
-</details>
-
-## Vercel, Next.js Commerce, and Shopify Integration Guide
-
-You can use this comprehensive [integration guide](https://vercel.com/docs/integrations/ecommerce/shopify) with step-by-step instructions on how to configure Shopify as a headless CMS using Next.js Commerce as your headless Shopify storefront on Vercel.
+</body>
+</html>
